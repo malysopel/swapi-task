@@ -1,0 +1,54 @@
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.content {
+  width: 70%;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__button {
+    width: 100%;
+    border: #e74f3c;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  }
+}
+
+.cards-container {
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  gap: 35px;
+  padding: 20px 0;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: #000000;
+  animation: spinner 0.8s linear infinite;
+}

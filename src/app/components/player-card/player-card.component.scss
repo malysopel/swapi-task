@@ -1,0 +1,123 @@
+:host {
+  width: 100%;
+}
+
+.mat-mdc-card {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  border-radius: 26px;
+}
+
+.line {
+  height: 2px;
+  background: linear-gradient(to right, transparent 50%, #e7e7e7 50%);
+  background-size:
+    6px 2px,
+    100% 2px;
+}
+
+.card-player {
+  border-radius: 16px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: #f6f6f6;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    div {
+      font-weight: 600;
+    }
+  }
+
+  &__header--image-person {
+    border-radius: 50px;
+    border: 2px solid #f1ac64;
+  }
+
+  &__header--image-spaceship {
+    border-radius: 50px;
+    border: 2px solid #b1a0fd;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 16px;
+  }
+
+  &__content-stats {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content-stats-icon {
+    padding: 10px;
+    margin: 0 20px 0 10px;
+    border-radius: 50px;
+    background-color: rgb(185, 170, 253);
+  }
+
+  &__content-stats-header {
+    color: #afafaf;
+  }
+
+  &__content-stats-content {
+    font-weight: 700;
+  }
+}
+
+.card-player:hover {
+  background-color: #ffffff;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  cursor: pointer;
+
+  .card-player__content-stats-icon {
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+  }
+}
+
+.weight {
+  background-color: #ffffff;
+  color: #f1ac64;
+  border: 2px solid #f1ac64;
+}
+
+.people {
+  background-color: #ffffff;
+  color: #b1a0fd;
+  border: 2px solid #b1a0fd;
+}
+
+.size {
+  background-color: #ffffff;
+  color: #f1ac64;
+  border: 2px solid #f1ac64;
+}
+
+.card-player.loaded {
+  opacity: 0.3;
+}
+
+.winner {
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.loser {
+  opacity: 0.3;
+}

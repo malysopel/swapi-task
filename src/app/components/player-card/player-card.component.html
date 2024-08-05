@@ -1,0 +1,76 @@
+<mat-card
+  class="card"
+  [class.winner]="attributes?.isWinner"
+  [class.loser]="attributes?.isWinner === false"
+>
+  <mat-card-content>
+    <div class="card-player" [class.loaded]="!attributes?.player">
+      <div class="card-player__header">
+        <div>Atrybuty gracza</div>
+        <img
+          class="card-player__header--image-person"
+          ngSrc="/images/face.png"
+          height="40"
+          width="40"
+         alt="Person avatar"/>
+      </div>
+      <div class="card-player__content">
+        <div class="card-player__content-stats">
+          <mat-icon
+            class="card-player__content-stats-icon weight"
+            fontIcon="scale"
+          ></mat-icon>
+          <div>
+            <div class="card-player__content-stats-header">Waga</div>
+            <div class="card-player__content-stats-content">
+              {{ attributes?.player?.mass ? attributes.player.mass : "- - -" }}
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="card-player__content-stats">
+          <mat-icon
+            class="card-player__content-stats-icon size"
+            fontIcon="height"
+          ></mat-icon>
+          <div>
+            <div class="card-player__content-stats-header">Wzrost</div>
+            <div class="card-player__content-stats-content">
+              {{
+                attributes?.player?.height ? attributes.player.height : "- - -"
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-player" [class.loaded]="!attributes?.starship">
+      <div class="card-player__header">
+        <div>Statek</div>
+        <img
+          class="card-player__header--image-spaceship"
+          ngSrc="/images/ship.png"
+          height="40"
+          width="40"
+          alt="Spaceship avater"
+        />
+      </div>
+      <div class="card-player__content">
+        <div class="card-player__content-stats">
+          <mat-icon
+            class="card-player__content-stats-icon people"
+            fontIcon="groups"
+          ></mat-icon>
+          <div>
+            <div class="card-player__content-stats-header">Załoga</div>
+            <div class="card-player__content-stats-content">
+              {{
+                attributes?.starship?.crew ? attributes.starship.crew : "- - -"
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
