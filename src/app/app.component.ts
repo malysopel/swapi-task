@@ -97,7 +97,9 @@ export class AppComponent implements OnDestroy {
           }),
           catchError((err) => {
             this._snackBar.open(
-              err.message === 'unknown' ? 'Jeden z wymaganych paramatrów jest niedostępny, za chwilę gra załaduje sie ponownie' : 'Nie udało się pobrać listy, za chwilę gra załaduje sie ponownie',
+              err.message === 'unknown'
+                ? 'Jeden z wymaganych paramatrów jest niedostępny, za chwilę gra załaduje sie ponownie'
+                : 'Nie udało się pobrać listy, za chwilę gra załaduje sie ponownie',
               'Zamknij',
               { duration: 3000 },
             );
