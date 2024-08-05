@@ -9,11 +9,11 @@ export class AttributesService {
   constructor(private readonly http: HttpClient) {}
 
   getAttributes(
-    attributesName: string,
+    attributeName: string,
     attributeNumber: number,
   ): Observable<any> {
     return this.http.get<any>(
-      `https://www.swapi.tech/api/${attributesName}/${attributeNumber}`,
+      `https://www.swapi.tech/api/${attributeName}/${attributeNumber}`,
     );
   }
 }

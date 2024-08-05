@@ -95,9 +95,9 @@ export class AppComponent implements OnDestroy {
             this.validateAttributes(secondResult);
             return [firstResult, secondResult];
           }),
-          catchError(() => {
+          catchError((err) => {
             this._snackBar.open(
-              'Nie znaleziono atrybutów, za chwilę gra załaduje sie ponownie',
+              err.message === 'unknown' ? 'Jeden z wymaganych paramatrów jest niedostępny, za chwilę gra załaduje sie ponownie' : 'Nie udało się pobrać listy, za chwilę gra załaduje sie ponownie',
               'Zamknij',
               { duration: 3000 },
             );
@@ -213,7 +213,7 @@ export class AppComponent implements OnDestroy {
       attributes.result.properties.height === 'unknown' ||
       attributes.result.properties.crew === 'unknown'
     ) {
-      throw new Error();
+      throw new Error('unknown');
     }
   }
 }

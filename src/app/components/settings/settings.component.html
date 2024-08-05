@@ -1,13 +1,16 @@
-<button mat-fab extended [matMenuTriggerFor]="menu">
-  <mat-icon>more_vert</mat-icon>Menu gry
-</button>
-<mat-menu #menu="matMenu">
-  <button (click)="menuEvent.emit('delete')" mat-menu-item>
-    <mat-icon>delete</mat-icon>
-    <span>Wyczyść historię gry</span>
+<div>
+  <button mat-fab extended [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+    Menu gry
   </button>
-  <button (click)="menuEvent.emit('download')" mat-menu-item>
-    <mat-icon>download</mat-icon>
-    <span>Pobierz historię gry</span>
-  </button>
-</mat-menu>
+  <mat-menu #menu="matMenu">
+    <button (click)="menuEvent.emit('delete')" mat-menu-item>
+      <mat-icon>delete</mat-icon>
+      <span>Wyczyść historię gry</span>
+    </button>
+    <button (click)="menuEvent.emit('download')" mat-menu-item>
+      <mat-icon>download</mat-icon>
+      <span>Pobierz historię gry</span>
+    </button>
+  </mat-menu>
+</div>

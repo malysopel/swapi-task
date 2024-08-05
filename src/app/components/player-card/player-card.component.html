@@ -6,7 +6,7 @@
   <mat-card-content>
     <div class="card-player" [class.loaded]="!attributes?.player">
       <div class="card-player__header">
-        <div>Atrybuty gracza</div>
+        <div class="card-player__header-name">Atrybuty gracza</div>
         <img
           class="card-player__header--image-person"
           ngSrc="/images/face.png"
@@ -46,7 +46,7 @@
     </div>
     <div class="card-player" [class.loaded]="!attributes?.starship">
       <div class="card-player__header">
-        <div>Statek</div>
+        <div class="card-player__header-name">Statek</div>
         <img
           class="card-player__header--image-spaceship"
           ngSrc="/images/ship.png"
